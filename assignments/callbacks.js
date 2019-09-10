@@ -71,9 +71,21 @@ function contains(item, list, cb) {
 console.log(contains(items, 'Pencil', item => `${item} is the answer to this search`));
 /* STRETCH PROBLEM */
 
+
+const items2 = ['Pencil', 'Notebook', 'yo-yo', 'Gum', 'Pencil', 'Notebook', 'yo-yo', 'Gum'];
+
 function removeDuplicates(array, cb) {
     // removeDuplicates removes all duplicate values from the given array.
     // Pass the duplicate free array to the callback function.
     // Do not mutate the original array.
+    const duplicatefree = new Set(array);
+    const backtoarray = [...duplicatefree];
+
+    return cb(backtoarray)
 
 }
+
+console.log(removeDuplicates(items2, (noduplicate) => {
+        return `Now these are no longer duplicate:( ${noduplicate} ) while keeping old values on items2 as well`
+    }))
+    //console.log(items2) -un this to verify that original array was not mutated..
