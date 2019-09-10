@@ -88,7 +88,7 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1 - Just getting the last name of the class.
+// Problem 1 - Just getting the last name of the class to see if any of them could be my cousin!.
 let newlastname = [];
 
 runners.forEach((lastname) => {
@@ -104,8 +104,8 @@ let cheaprunners = runners.filter((cheap) => {
 
 console.log(cheaprunners);
 
-// Problem 3 - getting first name + email from the runners           NEEDS TO BE WORKED STILL
-let emailsandnames = runners.map((allemails, allemais2) => {
-    return { "first_name": allemails.first_name, "email": allemais2.email }
-
-})
+// Problem 3 - getting first name + email from the runners in order to keep them informed throughout the year about the running program
+let emailsandnames = runners.map((allemails) => {
+    return { "first_name": allemails.first_name, "email": allemails.email }
+});
+console.log(emailsandnames);
